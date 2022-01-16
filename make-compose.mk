@@ -19,14 +19,9 @@ compose-stop:
 compose-restart:
 	docker-compose restart
 
-compose-setup: compose-down compose-build app-setup
-
-compose-ci-build:
-	docker build -f Dockerfile.production -t akryvaruchka/hexlet-js-fastify-blog:cached .
-	docker-compose -f docker-compose.yml build
-
-compose-ci: compose-ci-build
+compose-ci:
 	docker-compose --file docker-compose.yml up --abort-on-container-exit
 
 env-prepare:
 	cp -n .env.example .env || true
+	cp -n app/.env.example app/.env || true

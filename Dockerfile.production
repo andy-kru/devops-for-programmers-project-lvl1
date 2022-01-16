@@ -1,4 +1,8 @@
 FROM node:14.18.1
+
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.9.0/wait /wait
+RUN chmod +x /wait
+
 WORKDIR /app
 
 COPY app/package.json package.json
