@@ -7,5 +7,7 @@
 Project runs Javascript Fastify Blog with Postgres 14.1.
 
 make ci - run tests
+
 make setup - setup app
+
 make compose - run app
