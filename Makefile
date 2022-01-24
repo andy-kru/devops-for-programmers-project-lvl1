@@ -1,6 +1,6 @@
 env-prepare:
 	cp -n .env.example .env || true
-	cp -n app/.env.example app/.env || true
+	cp -n .env.example app/.env || true
 
 compose-install:
 	make env-prepare
