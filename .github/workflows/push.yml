@@ -21,7 +21,7 @@ jobs:
 
       - name: Run tests
         working-directory: .
-        run: make ci
+        run: make compose-ci
       
       - name: Login to DockerHub
         uses: docker/login-action@v1
