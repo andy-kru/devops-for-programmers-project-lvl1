@@ -15,5 +15,5 @@ $ make compose-install # install dependencies inside app container
 $ make compose-up # run server
 $ make compose-build # build docker image for app
 $ make compose-push # push docker image for app
-$ make compose-ci # execute tests
+$ make ci # execute tests
 ```

@@ -1,5 +1,4 @@
 env-prepare:
-	cp -n .env.example .env || true
 	cp -n .env.example app/.env || true
 
 compose-install:
@@ -15,6 +14,6 @@ compose-build:
 compose-push:
 	docker-compose -f docker-compose.yml push app
 
-compose-ci:
+ci:
 	make env-prepare
 	docker-compose --file docker-compose.yml up --abort-on-container-exit
